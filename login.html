@@ -25,7 +25,7 @@
                         <input type="password" class="login__input" placeholder="Password">
                     </div>
 
-                    <button class="button generate__otp" onclick="showOTPField(event)">
+                    <button class="button generate__otp" id="getOtp" onclick="showOTPField(event)">
                         <span class="button__text">
                             Get OTP
                         </span>
@@ -38,8 +38,8 @@
                             <input type="text" class="login__input" placeholder="Enter OTP">
                         </div>
                     </div>
-
-                    <button class="button login__submit">
+                            <!-- change in style and id -->
+                    <button class="button login__submit" id="submitBtn"  style="display: none; ">
                         <span class="button__text">Log In Now</span>
                         <i class="button__icon fas fa-chevron-right"></i>
                     </button>				
@@ -59,7 +59,14 @@
         function showOTPField(event) {
             event.preventDefault();
             document.getElementById("otpField").style.display = "block";
+            document.getElementById("getOtp").style.display = "none";
+            document.getElementById("submitBtn").style.display = "block";
         }
+
+        // function submitButton(event) {
+        //     event.preventDefault();
+        //     document.getElementById("submitBtn").style.display = "block";
+        // }
     </script>
 </body>
 </html>
